@@ -1,0 +1,16 @@
+@page
+@model DashboardModel
+
+<h2>Dashboard</h2>
+
+<p>Welcome, @Model.Email</p>
+
+<hr />
+
+<a href="/Upload">Upload CV</a>
+
+<hr />
+
+<form method="post" asp-page-handler="Logout">
+    <button type="submit">Logout</button>
+</form>

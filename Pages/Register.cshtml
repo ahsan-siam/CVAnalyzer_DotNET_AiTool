@@ -1,0 +1,30 @@
+@page
+@model RegisterModel
+
+<h2>Register</h2>
+
+<form method="post">
+    <div>
+        <input asp-for="Email" type="email" placeholder="Email" />
+    </div>
+
+    <br />
+
+    <div>
+        <input asp-for="Password" type="password" placeholder="Password" />
+    </div>
+
+    <br />
+
+    <button type="submit">Register</button>
+</form>
+
+@if (!string.IsNullOrEmpty(Model.Message))
+{
+    <p style="color:green">@Model.Message</p>
+}
+
+@if (!string.IsNullOrEmpty(Model.Error))
+{
+    <p style="color:red">@Model.Error</p>
+}
